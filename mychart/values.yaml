@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: 635179668331.dkr.ecr.us-west-2.amazonaws.com/my-docker-testrepo
+  repository: nginx
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
@@ -37,7 +37,7 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: LoadBalancer
+  type: ClusterIP
   port: 80
 
 ingress:
